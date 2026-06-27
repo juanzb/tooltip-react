@@ -1,5 +1,5 @@
 {
-  "name": "@juanzbDev/tooltip-react",
+  "name": "@juanzbdev/tooltip-react",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/tooltip-react.umd.js",
