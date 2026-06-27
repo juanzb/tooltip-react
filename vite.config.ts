@@ -6,7 +6,12 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   plugins: [
     react(),
-    dts({ insertTypesEntry: true }), // Este plugin genera los archivos de tipos (.d.ts)
+    // Este plugin genera los archivos de tipos (.d.ts)
+    dts({
+      insertTypesEntry: true,
+      tsconfigPath: "./tsconfig.app.json",
+      exclude: ["src/App.tsx", "src/main.tsx"],
+    }),
   ],
   build: {
     lib: {
