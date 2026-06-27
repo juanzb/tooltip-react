@@ -5,7 +5,6 @@
   "main": "./dist/tooltip-react.umd.js",
   "module": "./dist/tooltip-react.es.js",
   "types": "./dist/tooltip-react.es.d.ts",
-  "style": "./dist/tooltip-react.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/juanzb/tooltip-react.git"
@@ -15,8 +14,7 @@
       "types": "./dist/tooltip-react.es.d.ts",
       "import": "./dist/tooltip-react.es.js",
       "require": "./dist/tooltip-react.umd.js"
-    },
-    "./style.css": "./dist/tooltip-react.css"
+    }
   },
   "files": [
     "dist"
@@ -44,6 +42,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.61.0",
     "vite": "^8.1.0",
+    "vite-plugin-css-injected-by-js": "^5.0.1",
     "vite-plugin-dts": "^5.0.3"
   }
 }

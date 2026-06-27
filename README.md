@@ -30,13 +30,11 @@ yarn add @juanzbdev/tooltip-react
 
 ## Uso Básico
 
-1. Importa el componente y sus estilos CSS.
+1. Importa el componente (¡los estilos se inyectan automáticamente!).
 2. Envuelve el elemento que disparará el tooltip.
 
 ```tsx
 import { Tooltip } from "@juanzbdev/tooltip-react";
-// ¡Importante importar el CSS para los estilos base!
-import "@juanzbdev/tooltip-react/style.css";
 
 export default function App() {
   return (
