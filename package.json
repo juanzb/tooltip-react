@@ -6,6 +6,10 @@
   "module": "./dist/tooltip-react.es.js",
   "types": "./dist/tooltip-react.es.d.ts",
   "style": "./dist/tooltip-react.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanzb/tooltip-react.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/tooltip-react.es.d.ts",
