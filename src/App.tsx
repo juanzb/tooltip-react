@@ -1,122 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { Tooltip } from "./components/Tooltip";
+import "./components/Tooltip.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
+    <div style={{ padding: "40px", fontFamily: "sans-serif", maxWidth: "1200px", margin: "0 auto" }}>
+      <h2 style={{ borderBottom: "2px solid #eee", paddingBottom: "10px", marginBottom: "30px" }}>
+        Documentación: Tooltip React
+      </h2>
+      
+      {/* Usamos un grid para aprovechar el espacio horizontal y evitar scroll vertical */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
+        
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
+          <h3>1. Posiciones (`position`)</h3>
+          <p style={{ fontSize: "14px", color: "#555", marginBottom: "15px" }}>Valores aceptados: "top", "bottom", "left", "right".</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            <Tooltip label="Arriba" position="top"><button style={{ padding: "8px" }}>top</button></Tooltip>
+            <Tooltip label="Abajo" position="bottom"><button style={{ padding: "8px" }}>bottom</button></Tooltip>
+            <Tooltip label="Izquierda" position="left"><button style={{ padding: "8px" }}>left</button></Tooltip>
+            <Tooltip label="Derecha" position="right"><button style={{ padding: "8px" }}>right</button></Tooltip>
+          </div>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div>
+          <h3>2. Ocultar Flecha (`showArrow`)</h3>
+          <p style={{ fontSize: "14px", color: "#555", marginBottom: "15px" }}>Usa <code>showArrow={`{false}`}</code> para remover la flecha del diseño.</p>
+          <Tooltip label="Sin flechita" position="top" showArrow={false}>
+            <button style={{ padding: "8px" }}>Ocultar flecha</button>
+          </Tooltip>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <div>
+          <h3>3. Deshabilitar (`disabled`)</h3>
+          <p style={{ fontSize: "14px", color: "#555", marginBottom: "15px" }}>Usa <code>disabled={`{true}`}</code> para evitar que el tooltip se despliegue.</p>
+          <Tooltip label="No me ves" position="top" disabled={true}>
+            <button style={{ padding: "8px" }}>Botón inactivo</button>
+          </Tooltip>
+        </div>
+
+        <div>
+          <h3>4. Personalizar Color (`style`)</h3>
+          <p style={{ fontSize: "14px", color: "#555", marginBottom: "15px" }}>Cambia colores con <code>style={`{{ backgroundColor: 'green', ... }}`}</code>.</p>
+          <Tooltip 
+            label="Fondo verde" 
+            position="top"
+            style={{ backgroundColor: "green", borderColor: "green" }}
+          >
+            <button style={{ padding: "8px" }}>Tooltip Verde</button>
+          </Tooltip>
+        </div>
+
+        <div>
+          <h3>5. Bordes Redondeados (`style`)</h3>
+          <p style={{ fontSize: "14px", color: "#555", marginBottom: "15px" }}>Como es rectangular por defecto, puedes añadir <code>borderRadius: "8px"</code>.</p>
+          <Tooltip 
+            label="Bordes suaves" 
+            position="top"
+            style={{ borderRadius: "8px" }}
+          >
+            <button style={{ padding: "8px" }}>Bordes suaves</button>
+          </Tooltip>
+        </div>
+
+        <div>
+          <h3>6. Retardo al ocultar (`delayHide`)</h3>
+          <p style={{ fontSize: "14px", color: "#555", marginBottom: "15px" }}>Pasa <code>delayHide={`{1000}`}</code> para que tarde 1 segundo en desaparecer.</p>
+          <Tooltip 
+            label="Me voy lento..." 
+            position="top"
+            delayHide={1000}
+          >
+            <button style={{ padding: "8px" }}>Retardo (1000ms)</button>
+          </Tooltip>
+        </div>
+
+      </div>
+    </div>
+  );
 }
-
-export default App
