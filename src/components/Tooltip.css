@@ -1,37 +1,37 @@
 .react-tooltip-base {
-  position: fixed;
-  background-color: #1f2937;
-  color: #f9fafb;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 0.5rem 0.75rem;
+    position: fixed;
+    background-color: #1f2937;
+    color: #f9fafb;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
 
-  border: 1px solid #374151;
-  /* Eliminado border-radius para dejarlo rectangular por defecto */
+    border: 1px solid #374151;
+    /* Eliminado border-radius para dejarlo rectangular por defecto */
 
-  /* EL TRUCO DEFINITIVO PARA LA FLUIDEZ: 
+    /* EL TRUCO DEFINITIVO PARA LA FLUIDEZ: 
      Usar drop-shadow en lugar de box-shadow. 
      Drop-shadow lee la forma real (incluyendo la flecha) 
      y le pone la sombra al contorno entero como si fuera una sola pieza de plastilina. */
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
 
-  white-space: nowrap;
-  z-index: 9999;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
+    white-space: nowrap;
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .react-tooltip-arrow {
-  position: absolute;
-  width: 12px;
-  height: 12px;
+    position: absolute;
+    width: 12px;
+    height: 12px;
 
-  /* Heredar TODO del padre para que sea un clon perfecto del cuerpo */
-  background-color: inherit;
-  border-color: inherit;
-  border-style: inherit;
+    /* Heredar TODO del padre para que sea un clon perfecto del cuerpo */
+    background-color: inherit;
+    border-color: inherit;
+    border-style: inherit;
 
-  border-radius: 2px;
+    border-radius: 2px;
 }
 
 /* 
@@ -40,47 +40,47 @@
   Ocultamos los bordes internos (width: 0) para que el fondo tape la línea.
 */
 .react-tooltip-arrow.top {
-  bottom: -6.5px; /* Ligeramente más abajo para acoplar grosores mayores */
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  border-top-width: 0 !important;
-  border-left-width: 0 !important;
-  border-bottom-width: inherit;
-  border-right-width: inherit;
+    bottom: -6.5px; /* Ligeramente más abajo para acoplar grosores mayores */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-top-width: 0 !important;
+    border-left-width: 0 !important;
+    border-bottom-width: inherit;
+    border-right-width: inherit;
 }
 
 .react-tooltip-arrow.bottom {
-  top: -6.5px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  border-bottom-width: 0 !important;
-  border-right-width: 0 !important;
-  border-top-width: inherit;
-  border-left-width: inherit;
+    top: -6.5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-bottom-width: 0 !important;
+    border-right-width: 0 !important;
+    border-top-width: inherit;
+    border-left-width: inherit;
 }
 
 .react-tooltip-arrow.left {
-  right: -6.5px;
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  border-bottom-width: 0 !important;
-  border-left-width: 0 !important;
-  border-top-width: inherit;
-  border-right-width: inherit;
+    right: -6.5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border-bottom-width: 0 !important;
+    border-left-width: 0 !important;
+    border-top-width: inherit;
+    border-right-width: inherit;
 }
 
 .react-tooltip-arrow.right {
-  left: -6.5px;
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  border-top-width: 0 !important;
-  border-right-width: 0 !important;
-  border-bottom-width: inherit;
-  border-left-width: inherit;
+    left: -6.5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border-top-width: 0 !important;
+    border-right-width: 0 !important;
+    border-bottom-width: inherit;
+    border-left-width: inherit;
 }
 
 .react-tooltip-container {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
