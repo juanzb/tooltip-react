@@ -1,6 +1,6 @@
 {
     "name": "@jzarache/tooltip-react",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "module",
     "main": "./dist/tooltip-react.umd.js",
     "module": "./dist/tooltip-react.es.js",
@@ -21,7 +21,9 @@
     ],
     "scripts": {
         "dev": "vite",
+        "dev:demo": "vite --config vite.demo.config.ts",
         "build": "tsc -b && vite build",
+        "build:demo": "vite build --config vite.demo.config.ts",
         "lint": "eslint .",
         "preview": "vite preview"
     },
