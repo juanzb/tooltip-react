@@ -7,7 +7,7 @@
     "types": "./dist/tooltip-react.es.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/juanzb/tooltip-react.git"
+        "url": "https://github.com/jzarache/tooltip-react.git"
     },
     "exports": {
         ".": {
