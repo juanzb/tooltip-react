@@ -14,6 +14,8 @@ Desarrollado con las mejores prácticas: animaciones fluidas (fade-in / fade-out
 
 ## Instalación
 
+DEMO: -->> https://tooltip-react-jz.vercel.app
+
 Puedes instalarlo utilizando tu gestor de paquetes favorito:
 
 ```bash
@@ -37,13 +39,13 @@ yarn add @juanzbdev/tooltip-react
 import { Tooltip } from "@juanzbdev/tooltip-react";
 
 export default function App() {
-  return (
-    <div style={{ padding: "50px" }}>
-      <Tooltip label="¡Hola, soy un tooltip!" position="top">
-        <button>Pasa el mouse sobre mí</button>
-      </Tooltip>
-    </div>
-  );
+    return (
+        <div style={{ padding: "50px" }}>
+            <Tooltip label="¡Hola, soy un tooltip!" position="top">
+                <button>Pasa el mouse sobre mí</button>
+            </Tooltip>
+        </div>
+    );
 }
 ```
 
@@ -53,15 +55,15 @@ El componente está diseñado para ser moldeable. Puedes sobreescribir completam
 
 ```tsx
 <Tooltip
-  label="Tooltip verde y redondeado"
-  position="right"
-  style={{
-    backgroundColor: "#10b981",
-    borderColor: "#059669",
-    borderRadius: "12px",
-  }}
+    label="Tooltip verde y redondeado"
+    position="right"
+    style={{
+        backgroundColor: "#10b981",
+        borderColor: "#059669",
+        borderRadius: "12px",
+    }}
 >
-  <button>Hover me</button>
+    <button>Hover me</button>
 </Tooltip>
 ```
 

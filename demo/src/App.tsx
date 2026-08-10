@@ -1,4 +1,4 @@
-import { Tooltip } from "./components/Tooltip";
+import { Tooltip } from "../../src/components/Tooltip";
 
 export default function App() {
     return (
