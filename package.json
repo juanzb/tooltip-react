@@ -1,6 +1,6 @@
 {
     "name": "@jzarache/tooltip-react",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "type": "module",
     "main": "./dist/tooltip-react.umd.js",
     "module": "./dist/tooltip-react.es.js",
